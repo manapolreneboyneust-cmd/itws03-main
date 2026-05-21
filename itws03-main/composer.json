@@ -1,0 +1,17 @@
+{
+    "name": "deguzmanshanmichael/itws03-php",
+    "description": "ITWS03 PHP",
+    "authors": [
+        {
+            "name": "Shan Michael De Guzman",
+            "email": "deguzmanshanmichael@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Framework\\":
+            "Framework/",
+            "App\\": "App/"
+        }
+    }
+}

@@ -1,0 +1,1130 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap');
+
+
+:root {
+  --sky:           #0f766e;
+  --sky-dark:      #115e59;
+  --sky-light:     #d8f7f3;
+  --sky-mid:       #14b8a6;
+  --ink:           #0f172a;
+  --ink-mid:       #334155;
+  --ink-soft:      #475569;
+  --ink-faint:     #94a3b8;
+  --surface:       #f8fafc;
+  --surface-card:  #ffffff;
+  --border:        #e2e8f0;
+  --border-mid:    #cbd5e1;
+  --radius-card:   18px;
+  --radius-btn:    10px;
+  --shadow-card:   0 2px 16px rgba(15,23,42,0.07), 0 1px 3px rgba(15,23,42,0.04);
+  --shadow-hover:  0 20px 44px rgba(15,118,110,0.13), 0 4px 12px rgba(15,118,110,0.08);
+  --shadow-btn:    0 3px 10px rgba(15,118,110,0.28);
+  --shadow-btn-h:  0 6px 20px rgba(15,118,110,0.42);
+  --ease:          0.22s cubic-bezier(0.4,0,0.2,1);
+}
+
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body {
+  margin: 0; padding: 0;
+  font-family: 'Inter', sans-serif !important;
+  background: var(--surface) !important;
+  color: var(--ink) !important;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+header,
+nav,
+.navbar {
+  background: #ffffff !important;
+  border-bottom: 1px solid var(--border) !important;
+  box-shadow: 0 1px 12px rgba(15,23,42,0.07) !important;
+  padding: 0 2.5rem !important;
+  height: 68px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 200 !important;
+}
+
+
+header a:first-child,
+.navbar-brand,
+header .logo {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 1.65rem !important;
+  font-weight: 800 !important;
+  color: var(--ink) !important;
+  text-decoration: none !important;
+  letter-spacing: -0.035em !important;
+  background: none !important;
+  border: none !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+}
+
+
+header ul, nav ul,
+header nav, header .nav-links {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.6rem !important;
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  height: auto !important;
+}
+
+
+header a, nav a {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 0.88rem !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+  border-radius: 8px !important;
+  padding: 0.42rem 0.9rem !important;
+  color: var(--ink-mid) !important;
+  background: transparent !important;
+  border: 1.5px solid transparent !important;
+  transition: all var(--ease) !important;
+}
+
+header a:hover, nav a:hover {
+  color: var(--sky) !important;
+  background: var(--sky-light) !important;
+}
+
+
+header span, nav span {
+  font-size: 0.85rem !important;
+  color: var(--ink-soft) !important;
+  font-weight: 500 !important;
+}
+
+
+header a[href*="login"],
+nav a[href*="login"],
+header a[href$="/login"],
+nav a[href$="/login"] {
+  color: var(--sky) !important;
+  background: transparent !important;
+  border: 2px solid var(--sky) !important;
+  padding: 0.42rem 1.2rem !important;
+  font-weight: 700 !important;
+  font-size: 0.88rem !important;
+}
+
+header a[href*="login"]:hover,
+nav a[href*="login"]:hover {
+  background: var(--sky-light) !important;
+  border-color: var(--sky-dark) !important;
+  color: var(--sky-dark) !important;
+}
+
+
+header a[href*="register"],
+nav a[href*="register"],
+header a[href$="/register"],
+nav a[href$="/register"] {
+  color: #fff !important;
+  background: var(--sky) !important;
+  border: 2px solid var(--sky) !important;
+  padding: 0.42rem 1.2rem !important;
+  font-weight: 700 !important;
+  font-size: 0.88rem !important;
+  box-shadow: var(--shadow-btn) !important;
+}
+
+header a[href*="register"]:hover,
+nav a[href*="register"]:hover {
+  background: var(--sky-dark) !important;
+  border-color: var(--sky-dark) !important;
+  box-shadow: var(--shadow-btn-h) !important;
+  transform: translateY(-1px) !important;
+}
+
+
+header a[href*="create"],
+header a[href*="listings/create"],
+nav a[href*="create"] {
+  color: #fff !important;
+  background: var(--sky) !important;
+  border: 2px solid var(--sky) !important;
+  padding: 0.42rem 1.2rem !important;
+  font-weight: 700 !important;
+  font-size: 0.88rem !important;
+  box-shadow: var(--shadow-btn) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.3rem !important;
+}
+
+header a[href*="create"]:hover,
+nav a[href*="create"]:hover {
+  background: var(--sky-dark) !important;
+  border-color: var(--sky-dark) !important;
+  box-shadow: var(--shadow-btn-h) !important;
+  transform: translateY(-1px) !important;
+}
+
+
+header a[href*="logout"],
+nav a[href*="logout"],
+header button.logout-button,
+nav button.logout-button,
+header form.logout-form button.logout-button,
+nav form.logout-form button.logout-button {
+  color: var(--ink-soft) !important;
+  background: transparent !important;
+  border: 1.5px solid var(--border-mid) !important;
+  padding: 0.38rem 0.9rem !important;
+  font-size: 0.82rem !important;
+  font-weight: 600 !important;
+  border-radius: 7px !important;
+  cursor: pointer !important;
+}
+
+header a[href*="logout"]:hover,
+nav a[href*="logout"]:hover,
+header button.logout-button:hover,
+nav button.logout-button:hover,
+header form.logout-form button.logout-button:hover,
+nav form.logout-form button.logout-button:hover {
+  background: #ecfdf5 !important;
+  color: #dc2626 !important;
+  border-color: #fca5a5 !important;
+}
+
+
+.showcase,
+main > section:first-child,
+main > div:first-child {
+  position: relative !important;
+  background:
+    linear-gradient(155deg, rgba(15,23,42,0.90) 0%, rgba(15,118,110,0.80) 55%, rgba(20,184,166,0.20) 100%),
+    url('../images/showcase.jpg') center / cover no-repeat !important;
+  padding: 7rem 1.5rem 8rem !important;
+  text-align: center !important;
+  margin-top: 0 !important;
+  overflow: hidden !important;
+  min-height: 420px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.showcase::before {
+  content: '' !important;
+  position: absolute !important;
+  inset: 0 !important;
+  background: radial-gradient(ellipse 75% 55% at 50% 25%, rgba(56,189,248,0.14) 0%, transparent 68%) !important;
+  pointer-events: none !important;
+}
+
+.showcase h1,
+main > div:first-child h1 {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: clamp(2rem, 5vw, 3.4rem) !important;
+  font-weight: 800 !important;
+  color: #fff !important;
+  text-shadow: 0 2px 32px rgba(0,0,0,0.4) !important;
+  margin: 0 0 2.5rem !important;
+  letter-spacing: -0.03em !important;
+  line-height: 1.12 !important;
+}
+
+.showcase p,
+main > div:first-child > p {
+  color: rgba(255,255,255,0.82) !important;
+  font-size: 1.05rem !important;
+  margin: 0 0 2rem !important;
+  font-weight: 400 !important;
+}
+
+
+.showcase form,
+main > div:first-child form {
+  background: rgba(255,255,255,0.97) !important;
+  backdrop-filter: blur(12px) !important;
+  max-width: 860px !important;
+  width: 94% !important;
+  margin: 0 auto !important;
+  padding: 0.6rem 0.6rem 0.6rem 1.5rem !important;
+  border-radius: 60px !important;
+  box-shadow:
+    0 24px 56px rgba(7,24,54,0.28),
+    0 6px 20px rgba(2,132,199,0.12) !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+.showcase form input[type="text"],
+.showcase form select,
+main > div:first-child form input[type="text"],
+main > div:first-child form select {
+  flex: 1 !important;
+  background: transparent !important;
+  border: none !important;
+  padding: 0.7rem 0.5rem !important;
+  color: var(--ink) !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 0.95rem !important;
+  font-weight: 500 !important;
+  outline: none !important;
+  -webkit-appearance: none !important;
+  width: auto !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+.showcase form input[type="text"]::placeholder {
+  color: var(--ink-faint) !important;
+}
+
+
+.showcase form input[type="text"] + input[type="text"],
+.showcase form input[type="text"] + select {
+  border-left: 1.5px solid var(--border-mid) !important;
+  padding-left: 1rem !important;
+}
+
+.showcase form button,
+.showcase form input[type="submit"],
+main > div:first-child form button {
+  background: var(--sky) !important;
+  color: #fff !important;
+  font-family: 'Inter', sans-serif !important;
+  padding: 0.75rem 1.75rem !important;
+  border-radius: 50px !important;
+  font-size: 0.94rem !important;
+  font-weight: 700 !important;
+  border: none !important;
+  cursor: pointer !important;
+  white-space: nowrap !important;
+  box-shadow: 0 2px 10px rgba(2,132,199,0.3) !important;
+  transition: all var(--ease) !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.4rem !important;
+  flex-shrink: 0 !important;
+}
+
+.showcase form button:hover,
+main > div:first-child form button:hover {
+  background: var(--sky-dark) !important;
+  box-shadow: var(--shadow-btn-h) !important;
+  transform: translateY(-1px) !important;
+}
+
+
+main h2, .section-title {
+  font-family: 'Poppins', sans-serif !important;
+  font-weight: 800 !important;
+  font-size: clamp(1.5rem, 3vw, 2rem) !important;
+  color: var(--ink) !important;
+  letter-spacing: -0.025em !important;
+  text-align: center !important;
+  margin: 3.5rem 0 0.4rem !important;
+  line-height: 1.2 !important;
+}
+
+main > p.text-center, .section-sub {
+  text-align: center !important;
+  color: var(--ink-soft) !important;
+  font-size: 1rem !important;
+  margin-bottom: 2.5rem !important;
+}
+
+
+div.grid, .grid, .md\:grid-cols-3,
+main .grid, #jobs-container {
+  max-width: 1200px !important;
+  margin: 0 auto 4rem auto !important;
+  padding: 0 2rem !important;
+  display: grid !important;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)) !important;
+  gap: 1.75rem !important;
+}
+
+
+div.grid > div,
+.md\:grid-cols-3 > div,
+.bg-white, .job-card,
+main .bg-white,
+#jobs-container .bg-white {
+  background: var(--surface-card) !important;
+  border-radius: var(--radius-card) !important;
+  padding: 0 !important;
+  border: 1px solid var(--border) !important;
+  border-top: none !important;
+  box-shadow: var(--shadow-card) !important;
+  transition: transform var(--ease), box-shadow var(--ease), border-color var(--ease) !important;
+  position: relative !important;
+  overflow: hidden !important;
+  display: flex !important;
+  flex-direction: column !important;
+  cursor: pointer !important;
+}
+
+
+div.grid > div::before,
+.md\:grid-cols-3 > div::before,
+.bg-white::before, main .bg-white::before {
+  content: '' !important;
+  display: block !important;
+  height: 5px !important;
+  width: 100% !important;
+  background: linear-gradient(90deg, var(--sky) 0%, var(--sky-mid) 100%) !important;
+  flex-shrink: 0 !important;
+}
+
+div.grid > div:hover,
+.md\:grid-cols-3 > div:hover,
+main .bg-white:hover {
+  transform: translateY(-6px) !important;
+  box-shadow: var(--shadow-hover) !important;
+  border-color: #bae6fd !important;
+}
+
+
+div.grid > div h2, div.grid > div h3,
+div.grid > div p, div.grid > div ul,
+main .bg-white h2, main .bg-white h3,
+main .bg-white p, main .bg-white ul {
+  padding-left: 1.75rem !important;
+  padding-right: 1.75rem !important;
+}
+
+
+div.grid > div h3, div.grid > div h2,
+main .bg-white h3, main .bg-white h2 {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 1.12rem !important;
+  font-weight: 800 !important;
+  color: var(--ink) !important;
+  margin: 1.5rem 0 0.6rem !important;
+  line-height: 1.25 !important;
+  letter-spacing: -0.02em !important;
+}
+
+
+div.grid > div p, main .bg-white p {
+  font-size: 0.88rem !important;
+  color: var(--ink-soft) !important;
+  line-height: 1.75 !important;
+  margin: 0 0 0.75rem !important;
+}
+
+
+div.grid ul, main .bg-white ul { margin: 0.25rem 0 0.5rem !important; }
+
+div.grid li, main .bg-white li, #jobs-container li {
+  list-style: none !important;
+  list-style-type: none !important;
+  padding: 0.08rem 1.75rem !important;
+  margin: 0 0 0.3rem !important;
+  font-size: 0.875rem !important;
+  color: var(--ink-mid) !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.35rem !important;
+}
+
+div.grid li strong, main .bg-white li strong {
+  color: var(--ink) !important;
+  font-weight: 600 !important;
+}
+
+
+div.grid span.bg-blue-500,
+main .bg-white span.bg-blue-500,
+div.grid .bg-blue-500:not(a),
+main .bg-white .bg-blue-500:not(a) {
+  display: inline-flex !important;
+  align-items: center !important;
+  padding: 0.18rem 0.6rem !important;
+  font-size: 0.67rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.07em !important;
+  border-radius: 5px !important;
+  background: var(--sky-light) !important;
+  color: var(--sky-dark) !important;
+  border: 1px solid #bae6fd !important;
+  white-space: nowrap !important;
+  margin-left: 0.4rem !important;
+  vertical-align: middle !important;
+}
+
+
+div.grid a[href*="details"],
+div.grid a[href*="listings"],
+main .bg-white a[href*="details"],
+main .bg-white a[href*="listings"],
+#jobs-container a[href*="details"] {
+  display: block !important;               
+  width: 150px !important;                 
+  text-align: center !important;
+  background: var(--sky) !important;
+  color: #fff !important;
+  padding: 0.55rem 1.25rem !important;     
+  margin: 0.75rem auto 1.5rem auto !important; 
+  border-radius: var(--radius-btn) !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 0.8rem !important;            
+  font-weight: 700 !important;
+  text-decoration: none !important;
+  box-shadow: var(--shadow-btn) !important;
+  transition: all var(--ease) !important;
+  letter-spacing: 0.01em !important;
+  border-top: 1px solid var(--border) !important;
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+
+div.grid a[href*="details"]::before,
+main .bg-white a[href*="details"]::before {
+  content: '' !important;
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
+  right: -9999px !important;
+  bottom: -9999px !important;
+  z-index: 0 !important;
+}
+
+div.grid a[href*="details"]:hover,
+main .bg-white a[href*="details"]:hover {
+  background: var(--sky-dark) !important;
+  box-shadow: var(--shadow-btn-h) !important;
+  transform: translateY(-1px) !important;
+  color: #fff !important;
+}
+
+
+
+main {
+  padding: 2rem 1.5rem 5rem !important;
+}
+
+main > div.bg-white,
+.listing-detail {
+  max-width: 860px !important;
+  margin: 2rem auto !important;
+  
+  padding: 2.5rem 3.5rem !important; 
+  background: #fff !important;
+  border-radius: 20px !important;
+  box-shadow: var(--shadow-card) !important;
+  border: 1px solid var(--border) !important;
+  box-sizing: border-box !important;
+  text-align: left !important;
+}
+
+
+
+main, 
+#jobs-container,
+div:has(> .listing-detail) {
+  padding-left: 2rem !important;
+  padding-right: 2rem !important;
+  box-sizing: border-box !important;
+}
+
+
+main div[class*="bg-white"],
+main > div,
+.listing-detail {
+  max-width: 860px !important;
+  margin: 2.5rem auto !important;
+  
+  
+  padding: 3rem 3.5rem !important; 
+  
+  background: #fff !important;
+  border-radius: 20px !important;
+  box-shadow: var(--shadow-card) !important;
+  border: 1px solid var(--border) !important;
+  box-sizing: border-box !important;
+}
+
+
+main div[class*="bg-white"] *,
+.listing-detail *,
+main > div > * {
+  box-sizing: border-box !important;
+}
+
+
+main div[class*="bg-white"] p,
+.listing-detail p,
+main div[class*="bg-white"] {
+  line-height: 1.75 !important;
+  margin-bottom: 1.5rem !important;
+}
+
+
+main div[class*="bg-white"] ul,
+.listing-detail ul {
+  padding-left: 2.5rem !important; 
+  margin: 1.5rem 0 !important;
+}
+
+main div[class*="bg-white"] li,
+.listing-detail li {
+  margin-bottom: 0.6rem !important;
+}
+
+
+main h1 {
+  margin-top: 1rem !important;
+  margin-bottom: 1.5rem !important;
+}
+
+main div[class*="bg-white"] h2,
+main div[class*="bg-white"] h3,
+.listing-detail h2,
+.listing-detail h3 {
+  font-family: 'Poppins', sans-serif !important;
+  font-weight: 800 !important;
+  font-size: 1.3rem !important;
+  color: var(--ink) !important;
+  margin-top: 2.5rem !important;
+  margin-bottom: 1rem !important;
+  letter-spacing: -0.02em !important;
+}
+
+
+body:has(form[action*="register"]) main {
+  min-height: calc(100vh - 68px) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 3rem 1.5rem !important;
+}
+
+body:has(form[action*="register"]) main > div {
+  background: #fff !important;
+  border-radius: 20px !important;
+  padding: 3rem 3.5rem !important;
+  width: 100% !important;
+  max-width: 480px !important;
+  box-shadow:
+    0 8px 40px rgba(15,23,42,0.12),
+    0 2px 8px rgba(15,23,42,0.06),
+    0 0 0 1px var(--border) !important;
+  margin: 0 auto !important;
+}
+
+body:has(form[action*="register"]) main h1,
+body:has(form[action*="register"]) main h2 {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 1.75rem !important;
+  font-weight: 800 !important;
+  color: var(--ink) !important;
+  margin: 0 0 0.35rem !important;
+  letter-spacing: -0.03em !important;
+  text-align: center !important;
+}
+
+body:has(form[action*="register"]) main > div > p {
+  text-align: center !important;
+  color: var(--ink-soft) !important;
+  font-size: 0.9rem !important;
+  margin: 0 0 1.75rem !important;
+  padding: 0 !important;
+}
+
+
+body:has(form[action*="login"]) input,
+body:has(form[action*="login"]) select,
+body:has(form[action*="register"]) input,
+body:has(form[action*="register"]) select {
+  width: 100% !important;
+  background: var(--surface) !important;
+  border: 1.5px solid var(--border-mid) !important;
+  padding: 0.8rem 1.1rem !important;
+  border-radius: var(--radius-btn) !important;
+  color: var(--ink) !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 0.94rem !important;
+  font-weight: 500 !important;
+  outline: none !important;
+  margin-bottom: 1rem !important;
+  transition: border-color var(--ease), box-shadow var(--ease) !important;
+  -webkit-appearance: none !important;
+}
+
+body:has(form[action*="login"]) input:focus,
+body:has(form[action*="register"]) input:focus {
+  border-color: var(--sky) !important;
+  background: #fff !important;
+  box-shadow: 0 0 0 3.5px rgba(2,132,199,0.13) !important;
+}
+
+body:has(form[action*="login"]) input::placeholder,
+body:has(form[action*="register"]) input::placeholder {
+  color: var(--ink-faint) !important;
+}
+
+body:has(form[action*="login"]) label,
+body:has(form[action*="register"]) label {
+  display: block !important;
+  font-size: 0.84rem !important;
+  font-weight: 700 !important;
+  color: var(--ink-mid) !important;
+  margin-bottom: 0.4rem !important;
+}
+
+body:has(form[action*="login"]) button[type="submit"],
+body:has(form[action*="login"]) input[type="submit"],
+body:has(form[action*="register"]) button[type="submit"],
+body:has(form[action*="register"]) input[type="submit"] {
+  width: 100% !important;
+  background: var(--sky) !important;
+  color: #fff !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 1rem !important;
+  font-weight: 700 !important;
+  padding: 0.88rem 1.5rem !important;
+  border-radius: var(--radius-btn) !important;
+  border: none !important;
+  cursor: pointer !important;
+  box-shadow: var(--shadow-btn) !important;
+  transition: all var(--ease) !important;
+  margin-top: 0.5rem !important;
+}
+
+body:has(form[action*="login"]) button[type="submit"]:hover,
+body:has(form[action*="register"]) button[type="submit"]:hover {
+  background: var(--sky-dark) !important;
+  box-shadow: var(--shadow-btn-h) !important;
+  transform: translateY(-1px) !important;
+}
+
+body:has(form[action*="login"]) main a,
+body:has(form[action*="register"]) main a {
+  color: var(--sky) !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+}
+
+body:has(form[action*="login"]) main a:hover,
+body:has(form[action*="register"]) main a:hover {
+  color: var(--sky-dark) !important;
+  text-decoration: underline !important;
+}
+
+
+body:has(form[action*="create"]) main,
+body:has(form[action*="listings/create"]) main {
+  padding: 3rem 2rem 5rem !important;
+  background: var(--surface) !important;
+}
+
+
+body:has(form[action*="create"]) main h1 {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: clamp(1.6rem, 3vw, 2.2rem) !important;
+  font-weight: 800 !important;
+  color: var(--ink) !important;
+  text-align: center !important;
+  margin: 0 0 2.5rem !important;
+  letter-spacing: -0.03em !important;
+}
+
+
+body:has(form[action*="create"]) form,
+form[action*="create"],
+form[action*="listings"] {
+  background: #fff !important;
+  border-radius: 20px !important;
+  border: 1px solid var(--border) !important;
+  box-shadow: var(--shadow-card) !important;
+  max-width: 1200px !important;        
+  width: 100% !important;             
+  margin: 0 auto !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+}
+
+
+body:has(form[action*="create"]) form h2,
+form[action*="create"] h2,
+form[action*="listings"] h2 {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 0.72rem !important;
+  font-weight: 800 !important;
+  color: var(--sky-dark) !important;
+  background: var(--sky-light) !important;
+  padding: 0.9rem 2.5rem !important;
+  margin: 0 !important;
+  letter-spacing: 0.12em !important;
+  text-align: left !important;
+  border-bottom: 1px solid #bae6fd !important;
+  text-transform: uppercase !important;
+}
+
+
+form[action*="create"] > label,
+form[action*="listings"] > label {
+  display: block !important;
+  font-size: 0.84rem !important;
+  font-weight: 700 !important;
+  color: var(--ink-mid) !important;
+  margin: 1.4rem 2.5rem 0.4rem !important;
+  letter-spacing: 0.01em !important;
+}
+
+form[action*="create"] > input,
+form[action*="create"] > textarea,
+form[action*="create"] > select,
+form[action*="listings"] > input,
+form[action*="listings"] > textarea,
+form[action*="listings"] > select {
+  display: block !important;
+  width: calc(100% - 5rem) !important;
+  margin: 0 2.5rem !important;
+  background: var(--surface) !important;
+  border: 1.5px solid var(--border-mid) !important;
+  padding: 0.82rem 1.1rem !important;
+  border-radius: var(--radius-btn) !important;
+  color: var(--ink) !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 0.94rem !important;
+  font-weight: 500 !important;
+  outline: none !important;
+  transition: border-color var(--ease), box-shadow var(--ease) !important;
+  -webkit-appearance: none !important;
+}
+
+form[action*="create"] > textarea,
+form[action*="listings"] > textarea {
+  min-height: 130px !important;
+  resize: vertical !important;
+  line-height: 1.65 !important;
+}
+
+form[action*="create"] > input:focus,
+form[action*="create"] > textarea:focus,
+form[action*="listings"] > input:focus,
+form[action*="listings"] > textarea:focus {
+  border-color: var(--sky) !important;
+  background: #fff !important;
+  box-shadow: 0 0 0 3.5px rgba(2,132,199,0.13) !important;
+}
+
+form[action*="create"] > input::placeholder,
+form[action*="create"] > textarea::placeholder,
+form[action*="listings"] > input::placeholder,
+form[action*="listings"] > textarea::placeholder {
+  color: var(--ink-faint) !important;
+}
+
+
+form[action*="create"] > input + h2,
+form[action*="listings"] > input + h2,
+form[action*="create"] > textarea + h2 {
+  margin-top: 2rem !important;
+}
+
+
+form[action*="create"] > button[type="submit"],
+form[action*="create"] > input[type="submit"],
+form[action*="listings"] > button[type="submit"],
+form[action*="listings"] > input[type="submit"],
+body:has(form[action*="create"]) form button[type="submit"],
+body:has(form[action*="create"]) form input[type="submit"],
+form[action*="create"] > a,
+form[action*="listings"] > a,
+body:has(form[action*="create"]) form a[href]:not([href*="create"]) {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-sizing: border-box !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 0.95rem !important;
+  font-weight: 700 !important;
+  height: 48px !important;                 
+  width: 165px !important;                  
+  border-radius: var(--radius-btn) !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  transition: all var(--ease) !important;
+  letter-spacing: 0.01em !important;
+}
+
+
+form[action*="create"] > button[type="submit"],
+form[action*="create"] > input[type="submit"],
+form[action*="listings"] > button[type="submit"],
+form[action*="listings"] > input[type="submit"],
+body:has(form[action*="create"]) form button[type="submit"],
+body:has(form[action*="create"]) form input[type="submit"] {
+  background: linear-gradient(135deg, var(--sky) 0%, var(--sky-dark) 100%) !important; 
+  color: #fff !important;
+  border: none !important;
+  box-shadow: 0 4px 14px rgba(14,165,233,0.3), inset 0 1px 0 rgba(255,255,255,0.2) !important; 
+  margin: 2.5rem 0 3rem 2.5rem !important;
+}
+
+form[action*="create"] > button[type="submit"]:hover,
+body:has(form[action*="create"]) form button[type="submit"]:hover {
+  background: linear-gradient(135deg, var(--sky-dark) 0%, var(--sky-deep) 100%) !important;
+  box-shadow: 0 6px 20px rgba(14,165,233,0.45) !important;
+  transform: translateY(-1px) !important;
+}
+
+
+form[action*="create"] > a,
+form[action*="listings"] > a,
+body:has(form[action*="create"]) form a[href]:not([href*="create"]) {
+  background: #fff !important;
+  color: var(--ink-soft) !important;
+  border: 1.5px solid var(--border-mid) !important;
+  box-shadow: none !important;
+  margin: 2.5rem 0 3rem 1rem !important;    
+}
+
+form[action*="create"] > a:hover,
+body:has(form[action*="create"]) form a:hover {
+  background: var(--surface) !important;
+  border-color: var(--ink-faint) !important;
+  color: var(--ink) !important;
+  transform: translateY(-1px) !important;
+}
+
+
+main > div:not(.showcase):not([class*="bg-blue"]):has(h2) {
+  background: linear-gradient(135deg, #f0f9ff 0%, #e8f4fd 60%, #f8fafc 100%) !important;
+  border: 1px solid #bae6fd !important;
+  border-radius: 20px !important;
+  max-width: 1160px !important;
+  margin: 0 auto 4rem !important;
+  padding: 3rem !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 2rem !important;
+  position: relative !important;
+  overflow: hidden !important;
+  box-shadow: 0 4px 24px rgba(2,132,199,0.07) !important;
+}
+
+main > div:not(.showcase):not([class*="bg-blue"]):has(h2)::after {
+  content: '' !important;
+  position: absolute !important;
+  right: -80px !important; top: -80px !important;
+  width: 300px !important; height: 300px !important;
+  border-radius: 50% !important;
+  background: radial-gradient(circle, rgba(2,132,199,0.09) 0%, transparent 70%) !important;
+  pointer-events: none !important;
+}
+
+main > div:not(.showcase):not([class*="bg-blue"]):has(h2) h2 {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: clamp(1.4rem, 2.5vw, 1.9rem) !important;
+  font-weight: 800 !important;
+  color: var(--ink) !important;
+  margin: 0 0 0.5rem !important;
+  text-align: left !important;
+}
+
+main > div:not(.showcase):not([class*="bg-blue"]):has(h2) p {
+  color: var(--ink-soft) !important;
+  font-size: 0.95rem !important;
+  margin: 0 !important;
+  text-align: left !important;
+  padding: 0 !important;
+}
+
+main > div:not(.showcase):not([class*="bg-blue"]):has(h2) a {
+  display: inline-flex !important;
+  align-items: center !important;
+  background: var(--sky) !important;
+  color: #fff !important;
+  padding: 0.88rem 2rem !important;
+  border-radius: var(--radius-btn) !important;
+  font-weight: 700 !important;
+  font-size: 0.94rem !important;
+  text-decoration: none !important;
+  box-shadow: var(--shadow-btn) !important;
+  transition: all var(--ease) !important;
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
+  border: none !important;
+  margin: 0 !important;
+}
+
+main > div:not(.showcase):not([class*="bg-blue"]):has(h2) a:hover {
+  background: var(--sky-dark) !important;
+  box-shadow: var(--shadow-btn-h) !important;
+  transform: translateY(-2px) !important;
+  color: #fff !important;
+}
+
+
+main > div.bg-blue-900,
+div[class*="bg-blue-9"],
+.career-banner {
+  background: linear-gradient(135deg, #071830 0%, #0c3460 50%, #0369a1 100%) !important;
+  padding: 5.5rem 1.5rem !important;
+  text-align: center !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+main > div.bg-blue-900::before {
+  content: '' !important;
+  position: absolute !important;
+  inset: 0 !important;
+  background: radial-gradient(ellipse 70% 80% at 50% 50%, rgba(56,189,248,0.1) 0%, transparent 70%) !important;
+  pointer-events: none !important;
+}
+
+main > div.bg-blue-900 h1,
+main > div.bg-blue-900 h2,
+div[class*="bg-blue-9"] h2 {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: clamp(1.8rem, 4vw, 2.8rem) !important;
+  font-weight: 800 !important;
+  color: #fff !important;
+  letter-spacing: -0.03em !important;
+}
+
+main > div.bg-blue-900 p,
+div[class*="bg-blue-9"] p {
+  font-family: 'Inter', sans-serif !important;
+  color: rgba(255,255,255,0.72) !important;
+  font-size: 1.05rem !important;
+}
+
+
+footer, .site-footer {
+  background: #071830 !important;
+  padding: 4rem 2.5rem 2rem !important;
+  margin-top: 0 !important;
+  color: rgba(255,255,255,0.60) !important;
+  font-size: 0.9rem !important;
+  border-top: 1px solid rgba(255,255,255,0.06) !important;
+}
+
+footer a { color: #7dd3fc !important; text-decoration: none !important; transition: color var(--ease) !important; }
+footer a:hover { color: #fff !important; }
+
+footer h3, footer .footer-brand {
+  font-family: 'Poppins', sans-serif !important;
+  font-weight: 800 !important;
+  color: #fff !important;
+  font-size: 1.4rem !important;
+  margin-bottom: 0.35rem !important;
+  letter-spacing: -0.03em !important;
+}
+
+footer p {
+  color: rgba(255,255,255,0.45) !important;
+  font-size: 0.85rem !important;
+  margin-top: 0.2rem !important;
+  padding: 0 !important;
+}
+
+footer > p:last-child, footer .copyright {
+  border-top: 1px solid rgba(255,255,255,0.08) !important;
+  padding-top: 1.5rem !important;
+  margin-top: 2.5rem !important;
+  text-align: center !important;
+  font-size: 0.82rem !important;
+  color: rgba(255,255,255,0.35) !important;
+}
+
+
+::-webkit-scrollbar { width: 7px; }
+::-webkit-scrollbar-track { background: var(--surface); }
+::-webkit-scrollbar-thumb { background: var(--border-mid); border-radius: 99px; }
+::-webkit-scrollbar-thumb:hover { background: var(--ink-faint); }
+
+
+@media (max-width: 900px) {
+  main > div:not(.showcase):not([class*="bg-blue"]):has(h2) {
+    flex-direction: column !important;
+    text-align: center !important;
+    padding: 2.5rem 1.75rem !important;
+  }
+  main > div:not(.showcase):not([class*="bg-blue"]):has(h2) h2,
+  main > div:not(.showcase):not([class*="bg-blue"]):has(h2) p {
+    text-align: center !important;
+  }
+}
+
+@media (max-width: 768px) {
+  header, nav, .navbar { padding: 0 1.25rem !important; }
+
+  div.grid, .grid, main .grid, #jobs-container {
+    grid-template-columns: 1fr !important;
+    padding: 0 1rem !important;
+  }
+
+  body:has(form[action*="login"]) main > div,
+  body:has(form[action*="register"]) main > div {
+    padding: 2.25rem 2rem !important;
+  }
+
+  .showcase form, main > div:first-child form {
+    flex-direction: column !important;
+    border-radius: 18px !important;
+    padding: 1.25rem !important;
+    gap: 0.75rem !important;
+  }
+
+  .showcase form input[type="text"] + input[type="text"],
+  .showcase form input[type="text"] + select {
+    border-left: none !important;
+    border-top: 1.5px solid var(--border-mid) !important;
+    padding-left: 0.5rem !important;
+  }
+
+  .showcase form button {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+
+  form[action*="create"] > label,
+  form[action*="listings"] > label { margin: 1.2rem 1.5rem 0.4rem !important; }
+
+  form[action*="create"] > input,
+  form[action*="create"] > textarea,
+  form[action*="listings"] > input,
+  form[action*="listings"] > textarea {
+    width: calc(100% - 3rem) !important;
+    margin: 0 1.5rem !important;
+  }
+
+  form[action*="create"] > button[type="submit"] { margin-left: 1.5rem !important; }
+  form[action*="create"] > a { margin-left: 0.75rem !important; }
+
+  body:has(form[action*="create"]) form h2 { padding: 0.9rem 1.5rem !important; }
+}
+
+@media (max-width: 480px) {
+  .showcase h1 { font-size: 1.9rem !important; }
+  header a[href*="login"], header a[href*="register"] {
+    padding: 0.38rem 0.8rem !important;
+    font-size: 0.82rem !important;
+  }
+}
+
